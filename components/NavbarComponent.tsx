@@ -9,6 +9,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function NarbarComponent() {
+
+    const isService = false
+
     return (
         <Navbar fluid rounded className="w-full">
             <NavbarBrand as={Link} href="/">
@@ -32,7 +35,7 @@ export function NarbarComponent() {
                 <NavbarLink as={Link} href="/about">
                     About
                 </NavbarLink>
-                <NavbarLink href="/service">Services</NavbarLink>
+                <NavbarLink className={isService ? "bg-blue-600" : "bg-red-600"} href="/service">Services</NavbarLink>
                 <NavbarLink href="#">Pricing</NavbarLink>
                 <NavbarLink href="/contact">Contact</NavbarLink>
             </NavbarCollapse>
